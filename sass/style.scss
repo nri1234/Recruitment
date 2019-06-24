@@ -1,0 +1,514 @@
+@import "variable";
+@import "mixin";
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col"] {
+    min-height: 1px;
+    float: left;
+}
+
+.col-1 {
+    width: 8.334%
+}
+
+.col-2 {
+    width: 16.667%
+}
+
+.col-3 {
+    width: 25%
+}
+
+.col-4 {
+    width: 33.333%
+}
+
+.col-5 {
+    width: 41.667%
+}
+
+.col-6 {
+    width: 50%
+}
+
+.col-7 {
+    width: 58.334%
+}
+
+.col-8 {
+    width: 66.667%
+}
+
+.col-9 {
+    width: 75%
+}
+
+.col-10 {
+    width: 83.334%
+}
+
+.col-11 {
+    width: 91.667%
+}
+
+.col-12 {
+    width: 100%
+}
+
+.col-offset-0 {
+    margin-left: 0
+}
+
+.col-offset-1 {
+    margin-left: 8.334%
+}
+
+.col-offset-2 {
+    margin-left: 16.667%
+}
+
+.col-offset-3 {
+    margin-left: 25%
+}
+
+.col-offset-4 {
+    margin-left: 33.333%
+}
+
+.col-offset-5 {
+    margin-left: 41.667%
+}
+
+.col-offset-6 {
+    margin-left: 50%
+}
+
+.col-offset-7 {
+    margin-left: 58.334%
+}
+
+.col-offset-8 {
+    margin-left: 66.667%
+}
+
+.col-offset-9 {
+    margin-left: 75%
+}
+
+.col-offset-10 {
+    margin-left: 83.334%
+}
+
+.col-offset-11 {
+    margin-left: 91.667%
+}
+
+@media(max-width: 991px) {
+    .col-m-1 {
+        width: 8.33%;
+    }
+
+    .col-m-2 {
+        width: 16.66%;
+    }
+
+    .col-m-3 {
+        width: 25%;
+    }
+
+    .col-m-4 {
+        width: 33.33%;
+    }
+
+    .col-m-5 {
+        width: 41.66%;
+    }
+
+    .col-m-6 {
+        width: 50%;
+    }
+
+    .col-m-7 {
+        width: 58.33%;
+    }
+
+    .col-m-8 {
+        width: 66.66%;
+    }
+
+    .col-m-9 {
+        width: 75%;
+    }
+
+    .col-m-10 {
+        width: 83.33%;
+    }
+
+    .col-m-11 {
+        width: 91.66%;
+    }
+
+    .col-m-12 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+    max-width: 1980px;
+    font-family: "Montserrat", sans serif;
+}
+
+.container {
+    margin: 0 20px;
+
+    .forms {
+        margin-top: 25px;
+
+        .col {
+            color: #a5a4a5;
+            font-size: 15px;
+            @include padding(5px, 5px, 25px, 5px);
+            text-align: left;
+        }
+
+        input,
+        select {
+            display: flex;
+            border-radius: 5px;
+            padding: 10px;
+            background: inherit;
+            width: 100%;
+            display: block;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+        }
+
+        select {
+            background: white;
+        }
+
+        label {
+            color: black;
+        }
+
+        .button {
+            .buttonSave {
+                @include size(220px, 60px);
+                background: $secondcolor;
+                color: white;
+                font-size: 22px;
+            }
+        }
+
+    }
+}
+
+.progress {
+    display: flex;
+    text-align: center;
+    border: 1px solid #f4f4f4;
+    background: #f4f4f4;
+    padding: 25px;
+    font-size: 18px;
+
+    .check {
+        margin: 5px;
+        border: 1px solid #1eaace;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        background: $firstcolor;
+        color: white;
+        margin-bottom: 20px;
+
+        p {
+            font-size: 18px;
+        }
+
+        i {
+            font-size: 25px;
+            color: white;
+            font-weight: 600;
+        }
+    }
+
+    #myProgress {
+        position: relative;
+        background-color: darkgrey;
+        height: 10px;
+        top: 28px;
+        left: 0;
+
+        #myBar {
+            display: flex;
+            align-items: center;
+            width: 0%;
+            height: 10px;
+            background-color: $firstcolor;
+            position: absolute;
+            top: 5px;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    #myProgress1 {
+        position: relative;
+
+        #myBar1 {
+            display: flex;
+            align-items: center;
+            @include size(100%, 10px);
+            background-color: #1eaace;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.header {
+    border: 1px solid $firstcolor;
+    text-align: center;
+    line-height: 22px;
+    padding-bottom: 12px;
+    background: $firstcolor;
+    color: white;
+    width: 100%;
+    min-width: 360px;
+    font-size: 18px;
+
+    span {
+        font-weight: 900;
+        font-size: 20px;
+    }
+}
+
+.text {
+    text-align: center;
+    line-height: 22px;
+    margin: 10px;
+
+    p {
+        font-size: 18px;
+
+        span {
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $firstcolor;
+        }
+    }
+}
+
+.info {
+    text-align: left;
+    margin-left: 50px;
+    line-height: 5px;
+
+    h2 {
+        color: $firstcolor;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        margin: 0 50px;
+
+        .forms {
+            margin-top: 15px;
+
+            .col {}
+
+            input,
+            select {
+                width: 250px;
+            }
+
+            select {}
+
+            label {}
+
+            .button {
+                .buttonSave {
+                    @include size(180px, 60px);
+                    font-size: 20px;
+                }
+            }
+
+        }
+    }
+
+    .progress {
+        padding: 15px;
+        font-size: 15px;
+
+        .check {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+
+            p {
+                font-size: 15px;
+            }
+
+            i {
+                font-size: 20px;
+                color: white;
+                font-weight: 400;
+            }
+        }
+
+        #myProgress {
+            position: relative;
+            background-color: darkgrey;
+            height: 5px;
+            top: 28px;
+            left: 0;
+
+            #myBar {
+                display: flex;
+                align-items: center;
+                width: 0%;
+                height: 0px;
+                background-color: $firstcolor;
+                position: absolute;
+                top: 5px;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        #myProgress1 {
+            position: relative;
+
+            #myBar1 {
+                display: flex;
+                align-items: center;
+                @include size(100%, 5px);
+                background-color: #1eaace;
+                position: absolute;
+                top: 30px;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .header {
+        font-size: 15px;
+
+        span {
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+
+    .text {
+
+        p {
+            font-size: 15px;
+
+            span {
+                font-weight: 900;
+                font-size: 18px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $firstcolor;
+            }
+        }
+    }
+
+    .info {
+        text-align: left;
+        margin-left: 50px;
+        line-height: 5px;
+
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    br {
+        display: none;
+    }
+}
